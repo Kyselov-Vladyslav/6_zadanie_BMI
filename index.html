@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Kalkulator BMI</title>
+  </head>
+  <body>
+    <header>
+      <h1>Kalkulator: Body Mass Index</h1>
+    </header>
+    <main>
+      <section class="zaglowek">
+        <h2>Wskaźnik masy ciała</h2>
+        <div class="zaglowek-right">
+          <div class="zaglowek-item">
+            <a href="https://kyselov-vladyslav.github.io/zadania_domowe_project/">Strona główna</a>
+          </div>
+          <img class="zaglowek-img" src="assets/icons/gonext.svg" alt=">>" />
+          <div class="zaglowek-item">
+            <a href="#"><strong>Kalkulator BMI</strong></a>
+          </div>
+        </div>
+      </section>
+      <section class="opis">
+        <h3>Wskaźnik masy ciała (wskaźnik Queteleta II)</h3>
+        <p>
+          – współczynnik powstały przez podzielenie masy
+          ciała podanej w kilogramach przez kwadrat wysokości podanej w metrach.
+          Klasyfikacja (zakres wartości) wskaźnika <strong>BMI</strong> została
+          opracowana wyłącznie dla dorosłych i nie może być stosowana u dzieci.
+          Dla oceny prawidłowego rozwoju dziecka wykorzystuje się siatki
+          centylowe, które powinny być dostosowane dla danej populacji.
+          Oznaczanie wskaźnika masy ciała ma znaczenie w ocenie zagrożenia
+          chorobami związanymi z nadwagą i otyłością, np. cukrzycą, chorobą
+          niedokrwienną serca, miażdżycą. Przyjmuje się, że wyższe wartość
+          <strong>BMI</strong> wiążą się ze zwiększonym ryzykiem dla zdrowia i
+          życia.
+        </p>
+      </section>
+      <section class="content-main">
+        <h2 class="zaglowek-kalkulator">Kalkulator</h2>
+        <p>
+          W celu obliczenia <strong>wskaźnika masy ciała</strong> wprowadź wzrost (cm) i wagę (kg):
+        </p>
+        
+        <form>
+          <div class="formatowanie-input">
+            <input class="cm" type="number" name="wzrost" min="125" max="250" required placeholder="cm"/>
+            <p>Twój wzrost</p>
+          </div>
+          <div class="formatowanie-input">
+            <input class="kg" type="number" name="waga" min="25" max="250" required placeholder="kg"/>
+            <p>Twoja waga</p>
+          </div>
+        </form>
+        <div class="oblicz">
+          <button type="button" class="btn">OBLICZ</button>
+        </div>
+        <div class="content-output hidden">
+          <div class="content">
+            <p>Twój <strong>wskaźnik masy ciała:</strong></p>
+            <output id="result"></output>
+            <p class="wyrownianie">kg/m<sup><small>2</small></sup>
+            </p>
+          </div>
+          <div class="interpretacja">
+            <p class="wynik">Interpretacja twojego wyniku:</p>
+          </div>
+          <input class="result-pointer" type="range" min="15" max="41" step="0.01"> <br> 
+          <img
+            src="assets/masa.png"
+            alt="Wskaźnik masy ciała (Body Mass Index)"
+          />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-width">
+        <div class="zaglowek-item">
+          <a href="https://github.com/Kyselov-Vladyslav">@2022.Vladyslav Kyselov </a>
+        </div>
+        <div class="zaglowek-right">
+          <div class="zaglowek-item">
+            <a href="https://kyselov-vladyslav.github.io/zadania_domowe_project/">Strona główna</a>
+          </div>
+          <img class="zaglowek-img" src="assets/icons/gonext.svg" alt=">>" />
+          <div class="zaglowek-item">
+            <a href="#"><strong>Kalkulator BMI</strong></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/kalkulator_bmi.js"></script>
+  </body>
+</html>
